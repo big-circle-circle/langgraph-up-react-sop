@@ -82,7 +82,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/webup/langgraph-up-react.git
+git clone https://github.com/big-circle-circle/langgraph-up-react-sop.git
 cd langgraph-up-react
 ```
 
