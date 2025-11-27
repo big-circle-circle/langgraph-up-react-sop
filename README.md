@@ -83,7 +83,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 2. Clone the repository:
 ```bash
 git clone https://github.com/big-circle-circle/langgraph-up-react-sop.git
-cd langgraph-up-react
+cd langgraph-up-react-sop
 ```
 
 3. Install dependencies (including dev dependencies):
