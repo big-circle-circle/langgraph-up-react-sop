@@ -81,7 +81,7 @@ dev:
 	uv run langgraph dev --no-browser
 
 dev_ui:
-	uv run langgraph dev
+	uv run langgraph dev --allow-blocking
 
 
 ######################
@@ -126,6 +126,10 @@ spell_check:
 spell_fix:
 	uv run codespell --toml pyproject.toml -w
 
+generate_prompt:
+	# execute python function at common/utils.py generate_prompt_for_aircraft_id 
+	uv run python -c "from common.utils import generate_prompt_for_aircraft_id; print(generate_prompt_for_aircraft_id('$(AIRCRAFT_ID)', './data/test_set_with_and_without_output.csv'))"
+
 ######################
 # HELP
 ######################
@@ -161,4 +165,4 @@ help:
 	@echo 'lint                         - run linters (ruff + mypy on src/)'
 	@echo 'lint_tests                   - run linters on tests (ruff only, no mypy)'
 	@echo 'lint_package                 - run linters on src/ only'
-
+	@echo 'generate_prompt			    - generate prompt for given AIRCRAFT_ID'
